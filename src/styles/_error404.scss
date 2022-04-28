@@ -1,0 +1,44 @@
+.error-404 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+  height: 100vh;
+  h1 {
+    font-weight: 900;
+    font-size: 10rem;
+    svg.error-svg {
+      margin: 0 1rem;
+    }
+  }
+  p {
+    opacity: 65%;
+  }
+  a {
+    padding-top: 2rem;
+    color: #f1f1f1;
+    opacity: 30%;
+    &:hover {
+      opacity: 65%;
+    }
+    svg {
+      padding-top: 4px;
+    }
+  }
+  //animation
+  svg.error-svg {
+    animation: error 2s alternate infinite linear;
+  }
+
+  @keyframes error {
+    from {
+      transform: translateY(0.15em) scaleY(0.95);
+    }
+
+    to {
+      transform: translateY(-0.15em);
+    }
+  }
+}
