@@ -3,14 +3,14 @@ import React from "react";
 const Landing = () => {
   return (
     <section className="landing">
-      <aside className="aside-grid">
+      <aside className="aside-landing">
         <div className="aside-container">
           <h1>01</h1>
           <div className="line"></div>
           <div className="section-name">Introduction</div>
         </div>
       </aside>
-      <main className="main-grid">
+      <main className="main-landing">
         <h1>
           I'm Cosmin!
           <br />
@@ -27,7 +27,7 @@ const Landing = () => {
           developer and support other open source projects <span>❤️</span>.
         </p>
       </main>
-      <div className="image-grid"></div>
+      <div className="image-landing"></div>
     </section>
   );
 };

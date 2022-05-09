@@ -6,12 +6,12 @@
 @import "./landing";
 @import "./nav";
 @import "./home";
-@import "./about";
 @import "./colors";
 @import "./work";
 @import "./blog";
 @import "./contact";
 @import "./aside";
+@import "./about";
 
 //ROOT settings
 :root {
@@ -90,5 +90,25 @@ body {
   img {
     max-width: 100%;
     height: auto;
+    z-index: 2;
   }
+}
+
+//letter spacing
+.letter-spacing {
+  letter-spacing: 2px;
+}
+
+//blog page
+.blog-page-real {
+  margin: 5rem;
+}
+
+//music button
+
+.music {
+  display: flex;
+  z-index: 10;
+  cursor: pointer;
+  margin-top: 10rem;
 }

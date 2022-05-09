@@ -23,8 +23,8 @@ function CursorCore({
   color1,
   color = "0, 0, 0",
   outerAlpha = 0.3,
-  innerSize = 12,
-  outerSize = 12,
+  innerSize = 6,
+  outerSize = 6,
   outerScale = 4,
   innerScale = 0.6,
   trailingSpeed = 8,
@@ -42,6 +42,7 @@ function CursorCore({
     ".link",
     ".hamburger-react",
     ".pagination-container",
+    ".music",
   ],
 }) {
   const cursorOuterRef = useRef();

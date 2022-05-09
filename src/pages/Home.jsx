@@ -18,9 +18,7 @@ const Home = () => {
     <>
       <Images />
       {/* <AnimatedCursor color1={color1} /> */}
-      <div className="nav-container">
-        <Nav setColor1={setColor1} colorData={colorData} />
-      </div>
+      <Nav setColor1={setColor1} colorData={colorData} />
     </>
   );
 };

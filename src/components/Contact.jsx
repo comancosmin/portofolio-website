@@ -10,6 +10,29 @@ const Contact = () => {
           <div className="section-name">Contact me</div>
         </div>
       </aside>
+      <main className="main-contact">
+        <h1>Contact me</h1>
+        <div className="divider"></div>
+        <div className="input-group">
+          <input
+            required
+            type="text"
+            name="text"
+            autoComplete="off"
+            className="input"
+          />
+          <label className="label-name">Name</label>
+          <input
+            required
+            type="email"
+            name="email"
+            autoComplete="on"
+            className="input"
+          />
+          <label className="label-email">Email</label>
+        </div>
+      </main>
+      <div className="image-contact"></div>
     </section>
   );
 };

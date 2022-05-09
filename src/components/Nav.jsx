@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Squash as Hamburger } from "hamburger-react";
 //import components
 import Landing from "./Landing";
@@ -6,16 +6,15 @@ import About from "./About";
 import Work from "./Work";
 import Blog from "./Blog";
 import Contact from "./Contact";
+import Audio2 from "./Audio2";
 
 const Nav = ({ setColor1, colorData }) => {
-  {
-    //scroll on TOP when refreshing the page not working...
-    /*document.querySelector("body").onbeforeunload = function () {
-    window.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
-  };*/
-  }
-  //data
+  //set scroll position to 0 after refreshing the page
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
+
+  //there are the classes for swapping colors between the pages
   const colorChange = [
     "color-change-1",
     "color-change-2",
@@ -24,10 +23,10 @@ const Nav = ({ setColor1, colorData }) => {
     "color-change-5",
   ];
   //useStates
-  const [isOpen, setOpen] = useState(false);
-  const [clicked, setClicked] = useState(colorChange[0]);
+  const [isOpen, setOpen] = useState(false); //for burger animation
+  const [clicked, setClicked] = useState(colorChange[0]); //useState to set class on first div
 
-  //useRefs
+  //useRefs //refs used for navigation
   const landingSection = useRef(null);
   const aboutSection = useRef(null);
   const workSection = useRef(null);
@@ -35,7 +34,7 @@ const Nav = ({ setColor1, colorData }) => {
   const contactSection = useRef(null);
 
   return (
-    <div className={`${clicked}`}>
+    <div className={clicked}>
       <div className="nav">
         <div className="logo">
           <h1>cosmin.</h1>
@@ -170,20 +169,21 @@ const Nav = ({ setColor1, colorData }) => {
         >
           <div className="pagination-line pagination-line-active-5"></div>
         </div>
+        <Audio2 />
       </div>
-      <div ref={landingSection}>
+      <div className="home-page" ref={landingSection}>
         <Landing />
       </div>
-      <div ref={aboutSection}>
+      <div className="about-page" ref={aboutSection}>
         <About />
       </div>
-      <div ref={workSection}>
+      <div className="work-page" ref={workSection}>
         <Work />
       </div>
-      <div ref={blogSection}>
+      <div className="blog-page" ref={blogSection}>
         <Blog />
       </div>
-      <div ref={contactSection}>
+      <div className="contact-page" ref={contactSection}>
         <Contact />
       </div>
     </div>
