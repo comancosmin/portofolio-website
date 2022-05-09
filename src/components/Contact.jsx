@@ -11,7 +11,7 @@ const Contact = () => {
         </div>
       </aside>
       <main className="main-contact">
-        <h1>Contact me</h1>
+        <h1>Get in touch.</h1>
         <div className="divider"></div>
         <div className="input-group">
           <input

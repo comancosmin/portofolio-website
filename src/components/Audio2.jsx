@@ -38,7 +38,11 @@ class Audio2 extends Component {
           {this.state.isPlaying ? (
             <MdMusicOff size={30} />
           ) : (
-            <MdMusicNote size={30} />
+            <>
+              <div class="note">&#9834;</div>
+              <div class="note-2">&#9833;</div>
+              <MdMusicNote size={30} />
+            </>
           )}
         </button>
       </div>

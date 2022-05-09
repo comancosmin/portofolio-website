@@ -12,6 +12,7 @@
 @import "./contact";
 @import "./aside";
 @import "./about";
+@import "./audio";
 
 //ROOT settings
 :root {
@@ -102,13 +103,4 @@ body {
 //blog page
 .blog-page-real {
   margin: 5rem;
-}
-
-//music button
-
-.music {
-  display: flex;
-  z-index: 10;
-  cursor: pointer;
-  margin-top: 10rem;
 }
