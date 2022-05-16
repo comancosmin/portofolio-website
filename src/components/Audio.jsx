@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { MdMusicOff, MdMusicNote } from "react-icons/md";
 
 // Import your audio file
-import song from "../images/audio.mp3";
+import song from "./audio/audio.mp3";
 
-class Audio2 extends Component {
+class Song extends Component {
   // Create state
   state = {
     // Get audio file in a variable
@@ -39,8 +39,8 @@ class Audio2 extends Component {
             <MdMusicOff size={30} />
           ) : (
             <>
-              <div class="note">&#9834;</div>
-              <div class="note-2">&#9833;</div>
+              <div className="note">&#9834;</div>
+              <div className="note-2">&#9833;</div>
               <MdMusicNote size={30} />
             </>
           )}
@@ -50,4 +50,4 @@ class Audio2 extends Component {
   }
 }
 
-export default Audio2;
+export default Song;

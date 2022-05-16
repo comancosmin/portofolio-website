@@ -11,12 +11,23 @@ const Work = () => {
         </div>
       </aside>
       <main className="main-work">
-        <h1>My work is right here..</h1>
+        <h1>Some Projects</h1>
         <div className="divider"></div>
+        <h3>Latest Project</h3>
+        <p className="info-project">
+          Here is a music player made with React.Js with few songs and a pretty
+          nice design.
+          <br />
+          <p className="live-preview">
+            <a href="http://react.cosmincoman.com">react.cosmincoman.com</a> -
+            Live Preview
+          </p>
+        </p>
+        <br />
+        <h3>All projects</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eum
-          dignissimos vero perferendis dolorum itaque fugit deserunt, mollitia
-          quos iure.
+          dignissimos vero.
         </p>
       </main>
       <div className="image-work"></div>

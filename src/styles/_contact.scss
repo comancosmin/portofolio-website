@@ -22,6 +22,7 @@
   flex-direction: column;
   z-index: 10;
   grid-area: c2;
+  padding-top: 0px !important;
 }
 
 .image-contact {
@@ -29,9 +30,41 @@
 }
 
 //contact form
+.input-container {
+  width: 457px;
+}
 .input-group {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.6fr 0.6fr 1.8fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "input-name-email"
+    "input-subject"
+    "input-textarea";
+}
+.input-name-email {
+  grid-area: input-name-email;
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-auto-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "input-name input-email";
+  align-content: space-between;
+  justify-content: space-between;
+  width: 470px;
+}
+.input-name {
+  grid-area: input-name;
+  width: 220px;
+}
+.input-email {
+  grid-area: input-email;
+  width: 220px;
 }
 
 .input {
@@ -39,7 +72,8 @@
   border: none;
   padding: 0.75rem 0.75rem 0.9rem 0.75rem;
   font-size: 1rem;
-  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1.5px solid #e0e0e0;
+  width: 220px;
 
   &-group {
     position: relative;
@@ -55,22 +89,146 @@
     border-bottom: 1.5px solid #101010;
   }
 }
+.input-subject {
+  grid-area: input-subject;
+  width: 457px;
+  position: relative;
+  bottom: 2px;
+}
 
-.input:focus ~ label,
-input:valid ~ label {
-  transform: translateY(-50%) scale(0.8);
-  left: -10px;
-  top: -8px;
+.input-textarea {
+  grid-area: input-textarea;
+  width: 457px;
+  height: 120px;
+  position: relative;
+  bottom: 4px;
+}
+
+.input:focus ~ label.label-name,
+input:valid ~ label.label-name {
+  font-size: 0.8rem;
+  bottom: 4.3rem;
+  padding: 0 0.2em;
+  color: #101010;
+}
+.input:focus ~ label.label-email,
+input:valid ~ label.label-email {
+  font-size: 0.8rem;
+  bottom: 4.3rem;
   padding: 0 0.2em;
   color: #101010;
 }
 
-.label-name {
-  position: absolute;
-  left: 10px;
-  bottom: 4px;
+.input:focus ~ label.label-subject,
+input:valid ~ label.label-subject {
+  font-size: 0.8rem;
+  bottom: 4.5rem;
+  padding: 0 0.2em;
+  color: #101010;
+}
+.input:focus ~ label.label-textarea,
+textarea:valid ~ label.label-textarea {
+  font-size: 0.8rem;
+  bottom: 9.5rem;
+  padding: 0 0.2em;
+  color: #101010;
+}
+
+.label-name,
+.label-email {
+  position: relative;
+  bottom: 2.2rem;
+  padding: 0.75rem;
   color: #10101065;
   pointer-events: none;
-  transform: translateY(1rem);
   transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.label-subject {
+  position: relative;
+  bottom: 2.4rem;
+  padding: 0.75rem;
+  color: #10101065;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.label-textarea {
+  position: relative;
+  bottom: 7.5rem;
+  padding: 0.75rem;
+  color: #10101065;
+  pointer-events: none;
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+textarea {
+  font-family: Poppins, sans-serif;
+}
+
+//send button
+.send-button {
+  position: absolute;
+  left: 100%;
+  margin-left: 15px;
+  height: 95%;
+  width: 45px;
+  outline: none;
+  border: none;
+  background-color: #101010;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    opacity: 65%;
+  }
+}
+
+.submit-label {
+  position: absolute;
+  left: 100%;
+  margin-left: 25px;
+  bottom: 47%;
+  cursor: pointer;
+}
+//social media
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+  svg {
+    font-size: 2rem;
+  }
+  a {
+    color: #101010;
+    &:hover {
+      opacity: 65%;
+    }
+  }
+}
+
+//footer
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  margin-top: 4rem;
+  font-size: 12px;
+  .terms {
+    margin-top: 10px;
+    a {
+      opacity: 65%;
+      color: #101010;
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-left: 1rem;
+      }
+      &:hover {
+        opacity: 100% !important;
+      }
+    }
+  }
 }

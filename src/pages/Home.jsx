@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Images />
-      {/* <AnimatedCursor color1={color1} /> */}
+      <div className="cursor">{/* <AnimatedCursor color1={color1} /> */}</div>
       <Nav setColor1={setColor1} colorData={colorData} />
     </>
   );

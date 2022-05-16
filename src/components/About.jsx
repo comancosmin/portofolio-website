@@ -28,7 +28,7 @@ const About = () => {
       <div className="image-about"></div>
       <main className="main-about">
         <h1>Me, myself & I</h1>
-        <p>
+        <p className="quote">
           <em>"Think twice, code once"</em>
         </p>
         <div className="about-divider"></div>

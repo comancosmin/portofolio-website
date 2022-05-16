@@ -6,7 +6,7 @@ import About from "./About";
 import Work from "./Work";
 import Blog from "./Blog";
 import Contact from "./Contact";
-import Audio2 from "./Audio2";
+import Song from "./Audio";
 
 const Nav = ({ setColor1, colorData }) => {
   //set scroll position to 0 after refreshing the page
@@ -169,7 +169,7 @@ const Nav = ({ setColor1, colorData }) => {
         >
           <div className="pagination-line pagination-line-active-5"></div>
         </div>
-        <Audio2 />
+        <Song />
       </div>
       <div className="home-page" ref={landingSection}>
         <Landing />
