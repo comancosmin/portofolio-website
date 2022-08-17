@@ -26,7 +26,7 @@ const Nav = ({ setColor1, colorData }) => {
   const [isOpen, setOpen] = useState(false); //for burger animation
   const [clicked, setClicked] = useState(colorChange[0]); //useState to set class on first div
 
-  //useRefs //refs used for navigation
+  //useRefs - refs used for navigation
   const landingSection = useRef(null);
   const aboutSection = useRef(null);
   const workSection = useRef(null);
@@ -36,7 +36,14 @@ const Nav = ({ setColor1, colorData }) => {
   return (
     <div className={clicked}>
       <div className="nav">
-        <div className="logo">
+        <div
+          className="logo"
+          onClick={() => {
+            landingSection.current.scrollIntoView();
+            setClicked(colorChange[0]);
+            setColor1(colorData[0]);
+          }}
+        >
           <h1>cosmin.</h1>
         </div>
         <div className="hamburger">

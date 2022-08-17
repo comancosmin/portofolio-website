@@ -6,11 +6,10 @@ import {
   IoLogoLinkedin,
   IoLogoInstagram,
   IoLogoTwitter,
-  IoHeart,
 } from "react-icons/io5";
-import { Link } from "react-router-dom";
 
 const Contact = () => {
+  //email.js workflow
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -96,19 +95,32 @@ const Contact = () => {
             </label>
           </form>
           <div className="social-media">
-            <a href="https://github.com/comancosmin" target="_blank">
+            <a
+              href="https://github.com/comancosmin"
+              target="_blank"
+              rel="noreferrer"
+            >
               <IoLogoGithub />
             </a>
             <a
               href="https://www.linkedin.com/in/cosmin-coman-3142851b1/"
-              target="_blank"
+              target="_blank "
+              rel="noreferrer"
             >
               <IoLogoLinkedin />
             </a>
-            <a href="https://www.instagram.com/dev_cosmin/" target="_blank">
+            <a
+              href="https://www.instagram.com/dev_cosmin/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <IoLogoInstagram />
             </a>
-            <a href="https://twitter.com/dev_cosmin" target="_blank">
+            <a
+              href="https://twitter.com/dev_cosmin"
+              target="_blank"
+              rel="noreferrer"
+            >
               <IoLogoTwitter />
             </a>
           </div>

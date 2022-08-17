@@ -29,7 +29,7 @@ const About = () => {
       <main className="main-about">
         <h1>Me, myself & I</h1>
         <p className="quote">
-          <em>"Think twice, code once"</em>
+          <em>"Skills are cheap, passion is priceless."</em>
         </p>
         <div className="about-divider"></div>
         <div className="about-data">

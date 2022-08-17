@@ -9,7 +9,7 @@ import Home from "./pages/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
-  //this is not working because it is not any audio tags on the webpage
+  //this is not working because there isn't any audio tags on the webpage
   window.onload = function () {
     var backgroundAudio = document.getElementsByTagName("audio");
     backgroundAudio.volume = 0.2;

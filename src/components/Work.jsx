@@ -11,7 +11,7 @@ const Work = () => {
         </div>
       </aside>
       <main className="main-work">
-        <h1>Some Projects</h1>
+        <h1>A part of me</h1>
         <div className="divider"></div>
         <h3>Latest Project</h3>
         <p className="info-project">
@@ -19,15 +19,29 @@ const Work = () => {
           nice design.
           <br />
           <p className="live-preview">
-            <a href="http://react.cosmincoman.com">react.cosmincoman.com</a> -
-            Live Preview
+            <a
+              href="http://react.cosmincoman.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Live Preview
+            </a>
+            <div className="blob green"></div>
           </p>
         </p>
         <br />
-        <h3>All projects</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eum
-          dignissimos vero.
+        <h3>More projects</h3>
+        <p className="info-project">
+          You can see more projects made by me on GitHub.
+          <p className="live-preview">
+            <a
+              href="http://github.com/comancosmin"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Go on GitHub
+            </a>
+          </p>
         </p>
       </main>
       <div className="image-work"></div>

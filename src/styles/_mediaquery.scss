@@ -1,0 +1,14 @@
+@media only screen and (max-width: 600px) {
+  //navigation
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 55%;
+  }
+  img {
+    display: none;
+  }
+}

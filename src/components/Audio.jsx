@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { MdMusicOff, MdMusicNote } from "react-icons/md";
 
-// Import your audio file
+// Import audio file
 import song from "./audio/audio.mp3";
 
 class Song extends Component {
